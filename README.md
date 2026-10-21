@@ -1,23 +1,27 @@
-# Template for creating Stash plugins source index
+Source index URL: [`https://snow19172.github.io/snow19172-stash-plugins/main/index.yml`](https://snow19172.github.io/snow19172-stash-plugins/main/index.yml)
 
-This template allows you to create a new repository with a few clicks with preconfigured GitHub action to publish your plugins source index. 
-_This assumes you already know how to create plugins for Stash. If you don't, first read [this](https://docs.stashapp.cc/in-app-manual/plugins/#creating-plugins)._
+## Installation
 
-## How to use it?
+The easiest way is to add the plugin source to Stash:
 
-1. Click **Use this template** > **Create a new repository**. 
-1. Choose a repository name and click **Create repository**.
-1. Open **Settings** and head to **Pages**.
-1. Under Build and deployment select the Source as GitHub Actions.
+1. In Stash, go to **Settings → Plugins**.
+2. Under **Available Plugins**, click **Add Source**.
+3. Enter a name (for example `Collapsible Plugin and Scraper Settings`) and the source URL:
 
-Now add your plugins to [plugins](/plugins) directory and they will be automatically published to the source index.
+   ```
+   https://snow19172.github.io/snow19172-stash-plugins/main/index.yml
+   ```
 
-Source index URL: [`https://<your-username>.github.io/<repository-name>/main/index.yml`](https://<your-username>.github.io/<repository-name>/main/index.yml)
+4. Confirm, then tick **Collapsible Plugin Settings** in the list of available plugins and click **Install**.
+5. Hard-reload the page (Ctrl+F5) to ensure the JavaScript is loaded.
 
-## Share your plugins
+Updates are offered in the **Installed Plugins** section of the same page.
 
-- [Create a new topic](https://discourse.stashapp.cc/t/-/33) for your plugin on the community forum.
-- [Add your source index to the list](https://discourse.stashapp.cc/t/-/122) on the Stash community forum.
+## Manual Installation
+
+1. Put the folder `collapsible-plugin-settings` into the plugin directory of Stash (next to `config.yml`, typically `~/.stash/plugins/`).
+2. In Stash, click **Reload plugins** under *Settings → Plugins*.
+3. Hard-reload the page (Ctrl+F5) to ensure that the JavaScript is loaded.
 
 ## License
 

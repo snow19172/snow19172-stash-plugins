@@ -1,5 +1,5 @@
 name: Collapsible Plugin Scrapper Settings
-description: Makes the plugins and scrapers in Settings → Plugins → Available/Installed Plugins and Settings → Metadata Providers → Available/Installed Scrapers collapsible.
+description: Makes the plugins & scrapers under Available/Installed Plugins and Scrapers in settings collapsible.
 url: https://github.com/snow19172/snow19172-stash-plugins
 version: 0.0.1
 ui:

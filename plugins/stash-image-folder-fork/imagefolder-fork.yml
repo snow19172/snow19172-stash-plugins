@@ -2,7 +2,7 @@ name: Image Folder Fork
 # requires: StashUserscriptLibrary
 description: Navigate to parent folder.
 url: https://github.com/snow19172/snow19172-stash-plugins
-version: 1.0.0
+version: 1.0.1
 ui:
   requires:
     - CommunityScriptsUILibrary

@@ -1,2 +1,4 @@
 .lh/*
 */.lh/.*
+*.code-workspace
+*.log

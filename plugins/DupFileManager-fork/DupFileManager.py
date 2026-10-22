@@ -391,6 +391,8 @@ def significantTimeDiffCheck(durration1, durration2, ckTimeDiff = False): # If c
     return False
 
 def getTimeDif(durration1, durration2): # Where durration1 is ecpected to be smaller than durration2 IE(45/60=.75)
+    if durration2 == 0:
+        return 1 if durration1 == 0 else float("inf")
     return durration1 / durration2
 
 def isBetterVideo(scene1, scene2, swapCandidateCk = False): # is scene2 better than scene1
@@ -590,7 +592,7 @@ def doesDelCandidateHaveMetadataNotInDupToKeep(DupFile, DupFileToKeep, listName,
     return DupToKeepMissingItem, DelCandidateMissingItem
 
 
-htmlReportNameFolder        = f"{stash.PLUGINS_PATH}{os.sep}DupFileManager{os.sep}report"
+htmlReportNameFolder        = os.path.join(os.path.dirname(os.path.abspath(__file__)), "report")
 htmlReportName              = f"{htmlReportNameFolder}{os.sep}{stash.Setting('htmlReportName')}"
 htmlReportTableRow          = stash.Setting('htmlReportTableRow')
 htmlIncludeImagePreview     = stash.Setting('htmlIncludeImagePreview')

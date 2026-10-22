@@ -1,7 +1,7 @@
-name: DupFileManager
+name: DupFileManager-fork
 description: Manages duplicate files.
-version: 1.0.2
-url: https://discourse.stashapp.cc/t/dupfilemanager/1331
+version: 1.0.3
+url: https://github.com/snow19172/snow19172-stash-plugins
 ui:
   javascript:
     - DupFileManager.js

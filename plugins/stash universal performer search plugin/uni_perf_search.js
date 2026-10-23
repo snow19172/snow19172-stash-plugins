@@ -111,6 +111,31 @@
                 return [`https://coomer.st/artists?q=${encodeURIComponent(term)}`];
             },
         },
+        // --- Cum.st with OnlyFans/Fansly username extraction ---
+        cum_st: {
+            label: 'cum.st',
+            tooltip: 'cum.st: prefers OnlyFans/Fansly handle if performer URLs contain one.',
+            buildUrls: (name, _aliases, _inc, _cap, performer) => {
+                const extractHandle = (urls) => {
+                    if (!urls) return null;
+                    const all = Array.isArray(urls) ? urls.join('\n') : String(urls);
+                    const m = all.match(/(?:onlyfans\.com|fansly\.com)\/([A-Za-z0-9._-]+)/i);
+                    return m ? m[1] : null;
+                };
+
+                const handle = performer?.urls ? extractHandle(performer.urls) : null;
+                let term;
+
+                if (handle) {
+                    term = handle;
+                    console.log(`[SUS] Using ${handle} from performer URLs for cum.st search`);
+                } else {
+                    term = name.trim().replace(/\s+/g, '');
+                }
+
+                return [`https://cum.st/creators?cq=${encodeURIComponent(term)}`];
+            },
+        },        
         camgirlfinder: {
             label: 'Camgirlfinder',
             tooltip: 'Camgirlfinder: spaces become + (literal, not encoded).',
@@ -126,7 +151,7 @@
                 const q = name.trim().replace(/\s+/g, '+');
                 return [`https://seekfans.com/search/${q}`];
             },            
-        },  
+        },    
     };
 
     /* ---------- GraphQL ---------- */

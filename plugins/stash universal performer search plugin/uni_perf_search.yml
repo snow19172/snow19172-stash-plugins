@@ -1,7 +1,7 @@
 name: stash universal performer search
 description: Adds links to torrent trackers for performer in various locations (performer page / cards)
-version: "1.0"
-url: https://github.com/snow19172/stash_plugins/tree/main
+version: "1.1"
+url: https://github.com/snow19172/snow19172-stash-plugins
 ui:
   javascript:
     - uni_perf_search.js

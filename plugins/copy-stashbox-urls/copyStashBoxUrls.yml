@@ -1,0 +1,17 @@
+name: Copy StashBox URLs
+description: Extracts StashBox URLs from StashIDs and adds them to scene and performer URL fields
+version: 2.0.0
+url: https://github.com/snow19172/snow19172-stash-plugins
+exec:
+  - python
+  - "{pluginDir}/copyStashBoxUrls.py"
+interface: raw
+tasks:
+  - name: Copy StashBox URLs to Scenes
+    description: Process all scenes with StashIDs and add StashBox URLs to their URL fields
+    defaultArgs:
+      mode: process_scenes
+  - name: Copy StashBox URLs to Performers
+    description: Process all performers with StashIDs and add StashBox URLs to their URL fields
+    defaultArgs:
+      mode: process_performers

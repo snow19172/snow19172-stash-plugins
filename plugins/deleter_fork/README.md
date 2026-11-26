@@ -1,3 +1,5 @@
+# This plugin fork is still in development. Use at your own risk!
+
 # Addtional Files Deleter Fork
 
 https://github.com/snow19172/snow19172-stash-plugins/tree/main
